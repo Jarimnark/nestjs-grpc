@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+package user;
+
+
+service UserAggService {
+rpc aggregateUser (Empty) returns (DepartmentSummary) {}
+
+}
+
+
+message Empty {}
+
+
+message DepartmentSummary {
+    map<string, AggregateData> department = 1; 
+  }
+
+  message AggregateData {
+    int32 male = 1;
+    int32 female = 2;
+    string ageRange = 3;
+    map<string, int32> hair = 4;
+    map<string, string> addressUser = 5;
+  }
+// Define the user message
+// User message
+message User {
+    int32 id = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string maidenName = 4;
+    int32 age = 5;
+    string gender = 6;
+    string email = 7;
+    string phone = 8;
+    string username = 9;
+    string password = 10;
+    string birthDate = 11;
+    string image = 12;
+    string bloodGroup = 13;
+    float height = 14;
+    float weight = 15;
+    string eyeColor = 16;
+    Hair hair = 17;
+    string ip = 18;
+    Address address = 19;
+    string macAddress = 20;
+    string university = 21;
+    Bank bank = 22;
+    Company company = 23;
+    string ein = 24;
+    string ssn = 25;
+    string userAgent = 26;
+    Crypto crypto = 27;
+    string role = 28;
+  }
+  
+  // Hair details
+  message Hair {
+    string color = 1;
+    string type = 2;
+  }
+  
+  // Address details
+  message Address {
+    string address = 1;
+    string city = 2;
+    string state = 3;
+    string stateCode = 4;
+    string postalCode = 5;
+    Coordinates coordinates = 6;
+    string country = 7;
+  }
+  
+  // Coordinates details
+  message Coordinates {
+    double lat = 1;
+    double lng = 2;
+  }
+  
+  // Bank details
+  message Bank {
+    string cardExpire = 1;
+    string cardNumber = 2;
+    string cardType = 3;
+    string currency = 4;
+    string iban = 5;
+  }
+  
+  // Company details
+  message Company {
+    string department = 1;
+    string name = 2;
+    string title = 3;
+    Address address = 4;
+  }
+  
+  // Crypto details
+  message Crypto {
+    string coin = 1;
+    string wallet = 2;
+    string network = 3;
+  }
