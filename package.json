@@ -1,23 +1,23 @@
 {
-  "name": "grpc-aggregate-user",
+  "name": "aggregateuser",
   "version": "0.0.1",
   "description": "",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
+    "build": "nest build && nest build user",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/apps/grpc-aggregate-user/main",
+    "start:prod": "node dist/apps/aggregateuser/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./apps/grpc-aggregate-user/test/jest-e2e.json"
+    "test:e2e": "jest --config ./apps/aggregateuser/test/jest-e2e.json"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.12.2",

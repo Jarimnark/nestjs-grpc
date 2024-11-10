@@ -74,15 +74,6 @@ export class UserAggService implements OnModuleInit {
       // Collect full name and postal code
       const fullName = `${user.firstName}${user.lastName}`;
       data.addressUser[fullName] = user.address.postalCode;
-      console.log('data: ', user.company.department);
-      console.log('data: ', user.gender);
-      console.log('data: ', user.age);
-      console.log('data: ', user.hair.color);
-      console.log(
-        'this is the data after iterate: ',
-        departmentData[department],
-      );
-      console.log('this is minmaxage', minMaxAge);
     });
 
     return { department: departmentData };
