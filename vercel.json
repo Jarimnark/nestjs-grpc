@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/aggrefateuser/main.js",
-      "use": "@vercel/node"
+      "src": "dist/aggregateuser/main.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/aggregateuser/**"] }
+    },
+    {
+      "src": "dist/user/main.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/user/**"] }
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/aggrefateuser/main.js"
-    }
+    { "src": "/aggregateuser/(.*)", "dest": "dist/aggregateuser/main.js" },
+    { "src": "/user/(.*)", "dest": "dist/user/main.js" }
   ]
 }
