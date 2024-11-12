@@ -2,6 +2,7 @@ import { USER_AGG_SERVICE_NAME, UserAggServiceClient } from '@app/common';
 import { Inject, Injectable, OnModuleInit } from '@nestjs/common';
 import { USER_SERVICE } from './constant';
 import { ClientGrpc } from '@nestjs/microservices';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class UserAggService implements OnModuleInit {
