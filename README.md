@@ -26,6 +26,10 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+Compile in watch mode
+
+Path for test the application: /user-agg
+
 ## Project setup
 
 ```bash
@@ -39,6 +43,7 @@ $ pnpm install
 $ pnpm run start
 
 # watch mode
+$ pnpm run start:dev user
 $ pnpm run start:dev
 
 # production mode
